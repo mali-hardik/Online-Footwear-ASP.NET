@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database" Class="deliveryDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.delivery" Member="deliveries">
+    <Type Name="delivery">
+      <Column Name="uid" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="uname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="umobileno" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="pincode" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="locality" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="state" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="landmark" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="altumobileno" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="uemail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

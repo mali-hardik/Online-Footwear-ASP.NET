@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="rating">
+  <DataContextMoniker Name="/ratingDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b7d78d3b-08da-4314-a5ad-315d52a37668" absoluteBounds="4.625, 1.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/ratingDataContext/rating" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2015223-b84c-4127-9c35-ea98d4a1a771" absoluteBounds="4.64, 1.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

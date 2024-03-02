@@ -1,0 +1,322 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="after_usr.master.cs" Inherits="User_after_usr" %>
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Footwere </title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Smart Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- pignose css -->
+<link href="css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
+
+<!-- //pignose css -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<!-- cart -->
+	<script src="js/simpleCart.min.js"></script>
+<!-- cart -->
+<!-- for bootstrap working -->
+	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+<!-- //for bootstrap working -->
+<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
+<script src="js/jquery.easing.min.js"></script>
+ <script type = "text/javascript" >
+     function preventBack() { window.history.forward(); }
+     setTimeout("preventBack()", 0);
+     window.onunload = function () { null };
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server" method="post">
+<!-- header -->
+<div class="header">
+	<div class="container">
+		<ul>
+			<li><span class="glyphicon glyphicon-time" aria-hidden="true"></span>Free and Fast Delivery</li>
+			<li><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Free shipping On all orders</li>
+			<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="#">smartshop.com</a></li>
+		</ul>
+	</div>
+</div>
+<!-- //header -->
+<!-- header-bot -->
+<div class="header-bot">
+	<div class="container">
+		<div class="col-md-3 header-left">
+			<h1><a href="index.aspx"><img src="images/logo3.jpg"></a></h1>
+		</div>
+		<div class="col-md-6 header-middle">
+           <form>
+				<div class="search">
+					<%--<input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">--%>
+                    <asp:TextBox ID="txt_ser" runat="server" type="search" placeholder="Search"></asp:TextBox>
+				</div>
+				<div class="section_room">
+					<%--<select id="country" onchange="change_country(this.value)" class="frm-field required">
+						<option value="null">All categories</option>
+						<option value="null">Electronics</option>     
+						<option value="AX">kids Wear</option>
+						<option value="AX">Men's Wear</option>
+						<option value="AX">Women's Wear</option>
+						<option value="AX">Watches</option>
+					</select>--%>
+                    <asp:DropDownList ID="DropDownList1" runat="server" 
+                        DataSourceID="SqlDataSource1" DataTextField="cname" DataValueField="cid" 
+                        style="cursor:pointer;" AutoPostBack="True" 
+                        onselectedindexchanged="DropDownList1_SelectedIndexChanged">
+                        
+                    </asp:DropDownList>
+
+				    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                        ConnectionString="<%$ ConnectionStrings:constr %>" 
+                        SelectCommand="SELECT * FROM [category]"></asp:SqlDataSource>
+
+				</div>
+				<div class="sear-sub" style="height:50px;">
+                    <asp:ImageButton ID="ImageButton1" runat="server" 
+                        ImageUrl="~/User/images/search1.png" style="height:50px;width:100%" 
+                        onclick="ImageButton1_Click"/>
+					
+				</div>
+				<div class="clearfix"></div>
+			<%--</form>--%>
+		</div>
+		<div class="col-md-3 header-right footer-bottom">
+			<ul>
+				<%--<li><asp:Label ID="lbl_usr" runat="server" Text="Login"></asp:Label></li>--%>
+                <%--<li><a href="#"><i class="fa fa-user"></i> Account</a></li>--%>
+                
+                <li><a href="#" class="use1" data-toggle="modal" data-target="#myModal4" ><span style="width:90px;text-align:center">ACCOUNT</span></a></li>
+		        <li><a class="fb" href="#"></a></li>
+				<li><a class="twi" href="#"></a></li>
+				<li><a class="insta" href="#"></a></li>
+				<li><a class="you" href="#"></a></li>
+                
+                  
+            </ul>
+            
+		</div>
+       <div class="clearfix"></div>
+	</div>
+</div>
+<!-- //header-bot -->
+<!-- banner -->
+<div class="ban-top">
+	<div class="container">
+		<div class="top_nav_left">
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
+				  <ul class="nav navbar-nav menu__list">
+					<li class=" menu__item "><a class="menu__link" href="index.aspx" >Home</a></li>
+					<li class=" menu__item "><a class="menu__link" href="men.aspx?mid=1" >men</a></li>
+					<li class=" menu__item "><a class="menu__link" href="women.aspx?mid=2" >Women</a></li>
+					<li class=" menu__item "><a class="menu__link" href="children.aspx?mid=3" >Children</a></li>
+                    <li class=" menu__item "><a class="menu__link" href="orderdetails.aspx" >Order Details</a></li>
+					<li class=" menu__item "><a class="menu__link" href="contact.aspx" >Contact</a></li>
+				  </ul>
+				</div>
+			  </div>
+			</nav>	
+		</div>
+		<div class="top_nav_right">
+			<div class="cart box_1">
+						<a href="addtocart.aspx">
+							<h3> <div class="total">
+                                 <i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>₹ 
+								    <span><asp:Label ID="lbl_totl" runat="server" Text=""></asp:Label></span> (<span></span> items)
+                                   </div>
+								
+							</h3>
+						</a>
+						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+			</div>	
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+
+        <!-- contain place holder -->
+        
+         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+   
+
+        <!-- //contain place holder -->
+ 
+ <!-- //product-nav -->
+
+ <div class="coupons">
+	<div class="container">
+		<div class="coupons-grids text-center">
+			<div class="col-md-3 coupons-gd">
+				<h3>Buy your product in a simple way</h3>
+			</div>
+			<div class="col-md-3 coupons-gd">
+				<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+				<h4>LOGIN TO YOUR ACCOUNT</h4>
+				<p>Neque porro quisquam est, qui dolorem ipsum quia dolor
+			sit amet, consectetur.</p>
+			</div>
+			<div class="col-md-3 coupons-gd">
+				<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+				<h4>SELECT YOUR ITEM</h4>
+				<p>Neque porro quisquam est, qui dolorem ipsum quia dolor
+			sit amet, consectetur.</p>
+			</div>
+			<div class="col-md-3 coupons-gd">
+				<span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>
+				<h4>MAKE PAYMENT</h4>
+				<p>Neque porro quisquam est, qui dolorem ipsum quia dolor
+			sit amet, consectetur.</p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+
+<!-- footer -->
+<div class="footer">
+	<div class="container">
+		<div class="col-md-3 footer-left">
+			<h2><a href="index.html"><img src="images/logo3.jpg" alt=" " /></a></h2>
+			<p>Neque porro quisquam est, qui dolorem ipsum quia dolor
+			sit amet, consectetur, adipisci velit, sed quia non 
+			numquam eius modi tempora incidunt ut labore 
+			et dolore magnam aliquam quaerat voluptatem.</p>
+		</div>
+		<div class="col-md-9 footer-right">
+			<div class="col-sm-6 newsleft">
+				<h3>SIGN UP FOR NEWSLETTER !</h3>
+			</div>
+			<div class="col-sm-6 newsright">
+			<%--	<form>
+					<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+					<input type="submit" value="Submit">
+				</form>--%>
+			</div>
+			<div class="clearfix"></div>
+			<div class="sign-grds">
+				<div class="col-md-4 sign-gd">
+					<h4>Information</h4>
+					<ul>
+						<li><a href="index.aspx">Index</a></li>
+						<li><a href="men.aspx">Men</a></li>
+						<li><a href="women.aspx">Women</a></li>
+						<li><a href="children.aspx">Children</a></li>
+						<li><a href="contact.aspx">Contact</a></li>
+					</ul>
+				</div>
+				
+				<div class="col-md-4 sign-gd-two">
+					<h4>Store Information</h4>
+					<ul>
+						<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address : 12k Street, 45 Building Road <span>Newyork City.</span></li>
+						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email : <a href="">smartshop.com</a></li>
+						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone : +9099400550</li>
+					</ul>
+				</div>
+				<%--<div class="col-md-4 sign-gd flickr-post">
+					<h4>Flickr Posts</h4>
+					<ul>
+						<li><a href="single.html"><img src="images/b15.jpg" alt=" " class="img-responsive" /></a></li>
+						<li><a href="single.html"><img src="images/b16.jpg" alt=" " class="img-responsive" /></a></li>
+						<li><a href="single.html"><img src="images/b17.jpg" alt=" " class="img-responsive" /></a></li>
+						<li><a href="single.html"><img src="images/b18.jpg" alt=" " class="img-responsive" /></a></li>
+						<li><a href="single.html"><img src="images/b15.jpg" alt=" " class="img-responsive" /></a></li>
+						<li><a href="single.html"><img src="images/b16.jpg" alt=" " class="img-responsive" /></a></li>
+						<li><a href="single.html"><img src="images/b17.jpg" alt=" " class="img-responsive" /></a></li>
+						<li><a href="single.html"><img src="images/b18.jpg" alt=" " class="img-responsive" /></a></li>
+						<li><a href="single.html"><img src="images/b15.jpg" alt=" " class="img-responsive" /></a></li>
+					</ul>
+				</div>--%>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<p class="copy-right">Copyright &copy 2019, smart shop. All rights reserved </p>
+	</div>
+</div>
+<!-- //footer -->
+
+<!-- login -->
+    
+   		<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content modal-info" style="width:300px;margin-left:500px;margin-top:150px">
+                      <%-- <form>--%>
+                        <section>
+						
+                        <div class="modal-header"  style="background-color: #CCCCCC;text-align:center;">
+                            <asp:ImageButton ID="imgbtn_close" runat="server" class="close" 
+                                ImageUrl="~/User/images/icon-close-512.png" Width="20px" Height="20px" 
+                                onclick="imgbtn_close_Click"></asp:ImageButton>
+                            <asp:Label ID="lbl_acc" runat="server" Text="ACCOUNT"></asp:Label>
+                        </div>
+
+					     <div class="modal-body modal-spa">
+                            <div class="contact-form2" style="text-align:center;">
+                                <%--<asp:Label ID="lbl_chngpwd" runat="server" Text="Change Password"></asp:Label>--%>
+                                <asp:Label ID="lbluser" runat="server" Text="USER" ForeColor="#3366FF" style="cursor:pointer;"></asp:Label>&nbsp;&nbsp;&nbsp; 
+                                <asp:Label ID="lbl_user" runat="server" ForeColor="#3366FF" style="cursor:pointer;"></asp:Label>
+                            </div><hr />
+						    <div class="contact-form2" style="text-align:center;">
+                                <%--<asp:Label ID="lbl_chngpwd" runat="server" Text="Change Password"></asp:Label>--%>
+                                <asp:HyperLink ID="hypr_chngpwd" runat="server" 
+                                    onclick="window.open('chngepwd.aspx','FP','width=500,height=200,top=300,left=500,fullscreen=no,resizable=0');" 
+                                    style="cursor:pointer;" ForeColor="#3366FF">CHANGE PASSWORD</asp:HyperLink>
+                            </div><hr />
+                            <div class="contact-form2" style="text-align:center;">
+                                <%--<asp:Label ID="lbl_log" runat="server" Text="LOGOUT"></asp:Label>--%>
+                                <asp:HyperLink ID="hypr_log" runat="server" NavigateUrl="~/User/logout.aspx" 
+                                    style="cursor:pointer;" ForeColor="#3366FF">LOGOUT</asp:HyperLink>
+                            </div>
+                            
+                            <div class="login-grids">
+								<div class="login"> 
+									
+								</div>
+								<div class="clearfix"></div>
+							</div>
+					      </div>
+                        </section>
+                       </form>
+                    </div>
+				</div>
+			</div>
+            
+<!-- //login -->
+
+    </form>
+</body>
+</html>
+
+        
+      

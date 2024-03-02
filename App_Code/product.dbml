@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database" Class="productDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.product" Member="products">
+    <Type Name="product">
+      <Column Name="proid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="subcatid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="proname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="prodec" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="proimg" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="probimg" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="proprice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="proofferprice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="category" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
